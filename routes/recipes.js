@@ -58,7 +58,7 @@ router.put('/update/:id', (req, res)=> {
 
 router.delete('/:id', (req, res)=> {
   Recipe.findByIdAndDelete(req.params.id)
-  .then(()=> res.json('Recipe deleted.'))
+  .then((res)=> res.json('Recipe deleted.'))
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
